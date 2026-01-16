@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>车型展示 - Global Car Select 汽车出口贸易有限公司</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                    <img src="images/logo/logo.png" alt="Global Car Select" style="height: 40px;">
+                    <span>Global Car Select</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="vehicles.html" class="nav-link active">车型展示</a></li>
+                <li><a href="services.html" class="nav-link">服务介绍</a></li>
+                <li><a href="about.html" class="nav-link">关于我们</a></li>
+                <li><a href="testimonials.html" class="nav-link">客户评价</a></li>
+                <li><a href="contact.html" class="nav-link">联系我们</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>车型展示</h1>
+            <p>同车同质，成本直降15%-25%</p>
+        </div>
+    </section>
+
+    <!-- 车型展示 -->
+    <section id="vehicles" class="vehicles">
+        <div class="container">
+            <!-- 筛选器 -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">全部车型</button>
+                <button class="filter-btn" data-filter="electric">新能源</button>
+                <button class="filter-btn" data-filter="fuel">燃油车</button>
+                <button class="filter-btn" data-filter="suv">SUV</button>
+                <button class="filter-btn" data-filter="sedan">轿车</button>
+            </div>
+
+            <!-- 车型网格 -->
+            <div class="vehicles-grid" id="vehiclesGrid">
+                <!-- 车型卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 报价功能 -->
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <h2 class="section-title">在线询价</h2>
+            <p class="section-subtitle">填写信息，获取专属报价方案</p>
+            <div class="quote-form-container">
+                <form id="quoteForm" class="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱 *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">电话/WhatsApp *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">目标国家/地区 *</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vehicle">感兴趣车型 *</label>
+                            <select id="vehicle" name="vehicle" required>
+                                <option value="">请选择车型</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">采购数量 *</label>
+                            <input type="number" id="quantity" name="quantity" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">其他需求</label>
+                        <textarea id="message" name="message" rows="4" placeholder="请描述您的具体需求..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">提交询价</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Global Car Select</h3>
+                    <p>让全球用户花更少钱，购同款优质车型</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="vehicles.html">车型展示</a></li>
+                        <li><a href="services.html">服务介绍</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话: +86 158 6223 4700</li>
+                        <li>WhatsApp: +86 158 6223 4700</li>
+                        <li>邮箱: globalcarselect@163.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Global Car Select 汽车出口贸易有限公司. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
